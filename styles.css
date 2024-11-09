@@ -1,0 +1,92 @@
+/* styles.css */
+body {
+    background-color: #24273A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Rubik, sans-serif;
+    animation: fadeInBackground 2s ease-in-out;
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    max-width: 1400px;
+    width: 80vw; /* Use viewport width for responsiveness */
+    height: 70vh;
+    padding: 40px;
+    background-color: #1E1E2F;
+    border-radius: 15px; /* Added missing semicolon */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 50px; /* Added units */
+    color: #5588EE;
+    margin: 0;
+    margin-top: 20;
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "ROND" 59;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #88AAFF;
+    margin-top: 10;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Add space between items */
+    font-size: 1em;
+    color: #88AAFF;
+}
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bowos-desktop {
+    display: block;
+    width: 40vw;
+    height: auto;
+    margin-top: 0;
+}
+
+.lock-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 20px;
+}
+
+

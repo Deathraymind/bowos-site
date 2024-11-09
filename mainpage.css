@@ -1,0 +1,123 @@
+body {
+    background-color: #24273A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Rubik, sans-serif;
+    animation: fadeInBackground 2s ease-in-out;
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 80px;
+    color: #5588EE;
+    margin: 0;
+    margin-top: 10px;
+    font-family: "Doto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.subtitle {
+    font-size: 25px;
+    color: #88AAFF;
+    margin-top: 10px;
+}
+
+
+.image-container {
+    display: flex;
+    width: 70vh;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.top-menu {
+    background-color: #181826; /* Dark background color */
+    color: #fff; /* text color */
+    padding: 10px 20px; /* Space around items */
+    position: fixed; /* Sticks to the top */
+    top: 10px; /* Adds space from the top */
+    margin: 0 auto; /* Centers the menu */
+    width: 95%;
+    z-index: 1000; /* Keeps it on top */
+    border-radius: 20px;
+    display: flex; 
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Space between logo and menu items */
+}
+
+/* Logo Styling */
+.top-menu .logo {
+    font-size: 34px; /* Adjust font size for the logo */
+    font-weight: bold;
+    font-family: "Doto", sans-serif;
+    color: #5588EE;
+    font-weight: 900;
+
+}
+
+/* Menu Items Styling */
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 10px;
+    gap: 15px; /* Space between menu items */
+}
+
+.top-menu .download {
+    background-color: #5588EE; 
+    color: #fff; 
+    padding: 8px 15px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.top-menu li {
+    
+}
+
+.top-menu a {
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.top-menu a:hover {
+    background-color: #44475A; /* Darker color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
