@@ -121,3 +121,8 @@ body {
     background-color: #44475A; /* Darker color on hover */
     border-radius: 5px; /* Rounded corners on hover */
 }
+
+
+#firefox-icon {
+    color: #ff0000; /* Change to the desired color */
+}

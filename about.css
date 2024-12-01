@@ -24,7 +24,7 @@ body {
     display: flex;
     max-width: 1400px;
     width: 80vw; /* Use viewport width for responsiveness */
-    height: 70vh;
+    height: 80vh;
     padding: 40px;
     background-color: #1E1E2F;
     border-radius: 15px; /* Added missing semicolon */
@@ -59,9 +59,11 @@ body {
 .details {
     display: flex;
     align-items: center;
-    margin-bottom: 30px; /* Add space between items */
+    margin-bottom: 60px; /* Add space between items */
     font-size: 1em;
     color: #88AAFF;
+    border-radius: 15px;
+    background-color: #24273A;
 }
 .image-container {
     flex: 1;
