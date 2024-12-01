@@ -1,0 +1,59 @@
+.top-menu {
+    position: fixed;
+    background-color: #181826; 
+    left: 50%; /* Key change */
+    transform: translateX(-50%); /* how does this even work /
+    color: #fff; /* text color */
+    padding: 10px 20px; /* Space around items */
+    position: fixed; /* Sticks to the top */
+    top: 10px; /* Adds space from the top */
+    margin: 0 auto; /* Centers the menu */
+    width: 90%;
+    z-index: 1000; /* Keeps it on top */
+    border-radius: 20px;
+    display: flex; 
+    align-items: center; /* Vertically centers items */
+    justify-content: center; /* Centers the menu items horizontally */
+    gap: 20px; /* Adds spacing between items */
+}
+
+.top-menu .logo {
+    font-size: 34px; /* Adjust font size for the logo */
+    font-weight: bold;
+    font-family: "Doto", sans-serif;
+    color: #5588EE;
+    font-weight: 900;
+    margin-right: auto; /* Align logo to the left */
+}
+
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 15px; /* Space between menu items */
+}
+
+.top-menu .download {
+    background-color: #5588EE; 
+    color: #fff; 
+    padding: 8px 15px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
+}
+
+.top-menu a {
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.top-menu a:hover {
+    background-color: #44475A; /* Darker color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
