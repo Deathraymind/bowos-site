@@ -21,27 +21,65 @@
 
 <!-- calls the menue bar be sure to grab it using jqury like above -->
 <div id="menu"></div>
-<body>
     <div class="content">
-        <div class="content">
-            <h1 class="main-title">This is BowOS</h1>
-            <p class="subtitle">A nix-based operating system</p>
-        </div>
-        <div class="image-container">
-          <video width="1400" height=auto autoplay muted>
-            <source src="assets/videos/desktop.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+        <div class="page">
+        <h1 class="main-title">This is BowOS</h1>
+
+    <div class="typing-text" id="typingText"></div>
+
+    <script>
+        const words = ['Better', 'Stronger', 'Faster'];
+        const typingElement = document.getElementById('typingText');
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            
+            if (!isDeleting && charIndex <= currentWord.length) {
+                typingElement.textContent = currentWord.slice(0, charIndex + 1);
+                charIndex++;
+                setTimeout(type, 100);
+            } 
+            else if (isDeleting && charIndex >= 0) {
+                typingElement.textContent = currentWord.slice(0, charIndex);
+                charIndex--;
+                setTimeout(type, 50);
+            }
+            else if (isDeleting) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500);
+            }
+            else {
+                isDeleting = true;
+                setTimeout(type, 1000);
+            }
+        }
+
+        type();
+    </script>
+            
+
+        <video class="video" width="1400" height="auto" autoplay muted>
+                <source src="assets/videos/desktop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
+        </div>
 
         <div class="container">
             <a class="sub-heading" href="https://nixos.org/">Powered By Nix!</a>
             <h3 class="info">
-                Nix is a coding language built on keeping systems consistant and reliable!
+                Nix is a coding language built on keeping systems consistent and reliable!
             </h3>
-             <img src="assets/images/bowos-laptop.png" class="bowos-laptop">
+            <img src="assets/images/bowos-laptop.png" class="bowos-laptop">
         </div>
 
+        <div class="additional-info">
+            <h1 class="sub-heading">Turn youre old PC into a powerhouse</h1>
+            <p class="subtitle">Additional details</p>
+        </div>
     </div>
-</body>
 </html>
 
