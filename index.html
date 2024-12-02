@@ -1,76 +1,68 @@
 <!DOCTYPE html>
 <!--browser-sync start --server --files "*.html, *.css"-->
 <!-- https://feathericons.com/?query=lock -->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BowOS</title>
     <link rel="stylesheet" href="mainpage.css">
-     <link rel="stylesheet" href="sliding.css">
+    <link rel="stylesheet" href="sliding.css">
     <script src="myscripts.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <script> 
     $(function(){
-      $("#menu").load("menu.html"); 
+        $("#menu").load("menu.html"); 
     });
     </script> 
 </head>
-
 <!-- calls the menue bar be sure to grab it using jqury like above -->
 <body>
-<div id="menu"></div>
+    <div id="menu"></div>
     <div class="content">
         <div class="page">
-        <h1 class="main-title">This is BowOS</h1>
-
-    <div class="typing-text" id="typingText"></div>
-
-    <script>
-        const words = ['Better', 'Stronger', 'Faster'];
-        const typingElement = document.getElementById('typingText');
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function type() {
-            const currentWord = words[wordIndex];
+            <h1 class="main-title">This is BowOS</h1>
+            <div class="typing-text" id="typingText"></div>
+            <script>
+                const words = ['Better', 'Stronger', 'Faster'];
+                const typingElement = document.getElementById('typingText');
+                let wordIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+                function type() {
+                    const currentWord = words[wordIndex];
+                    
+                    if (!isDeleting && charIndex <= currentWord.length) {
+                        typingElement.textContent = currentWord.slice(0, charIndex + 1);
+                        charIndex++;
+                        setTimeout(type, 100);
+                    } 
+                    else if (isDeleting && charIndex >= 0) {
+                        typingElement.textContent = currentWord.slice(0, charIndex);
+                        charIndex--;
+                        setTimeout(type, 50);
+                    }
+                    else if (isDeleting) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                        setTimeout(type, 500);
+                    }
+                    else {
+                        isDeleting = true;
+                        setTimeout(type, 1000);
+                    }
+                }
+                type();
+            </script>
             
-            if (!isDeleting && charIndex <= currentWord.length) {
-                typingElement.textContent = currentWord.slice(0, charIndex + 1);
-                charIndex++;
-                setTimeout(type, 100);
-            } 
-            else if (isDeleting && charIndex >= 0) {
-                typingElement.textContent = currentWord.slice(0, charIndex);
-                charIndex--;
-                setTimeout(type, 50);
-            }
-            else if (isDeleting) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                setTimeout(type, 500);
-            }
-            else {
-                isDeleting = true;
-                setTimeout(type, 1000);
-            }
-        }
-
-        type();
-    </script>
-            
-
-        <video class="video" width="1400" height="auto" autoplay muted>
+            <video class="video" width="1400" height="auto" autoplay muted>
                 <source src="assets/videos/desktop.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-
         <div class="container">
             <a class="sub-heading" href="https://nixos.org/">Powered By Nix!</a>
             <h3 class="info">
@@ -78,29 +70,34 @@
             </h3>
             <img src="assets/images/bowos-laptop.png" class="bowos-laptop">
         </div>
-
-
         <div class="page-sliding">
-
-        
             <div id="left-side" class="side">
-              <h2 class="title">
-                  New and Shiny
-                  <img src="assets/images/new-computer.png"  width="700" height="auto" class="slide-image" >
-              </h2>
+                <h2 class="title">
+                    New and Shiny
+                    <img src="assets/images/new-computer.png" width="700" height="auto" class="left-slide-image">
+                </h2>
             </div>
             <div id="right-side" class="side">
-              <h2 class="title">
-                  Old and Cruddy
-                   <img src="assets/images/old-computer.png"  width="700" height="auto" class="slide-image" >
-              </h2>
+                <h2 class="title">
+                    Old and Cruddy
+                    <img src="assets/images/old-computer.png" width="700" height="auto" class="right-slide-image">
+                </h2>
             </div>
+        </div>
+        <div class="page-hyprland">
+            <h2 class="subtitle">
+                Using Hyprland Windows Manager
+            </h2>
+            <video class="video-hyprland" autoplay muted loop>
+                <source src="assets/videos/hyprland.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
 
 
 
         </div>
     </div>
     <script src="sliding.js"></script>
-    </body>
+</body>
 </html>
-
