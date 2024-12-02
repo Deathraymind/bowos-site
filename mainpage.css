@@ -26,6 +26,13 @@ body {
     text-align: left;
     height: 100vh;
 }
+
+.page-sliding {
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -106,6 +113,14 @@ body {
     width: 600px;
     height: auto;
     margin-left: 50px;
+}
+
+
+.slide-image {
+ position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%); 
 }
 
 #firefox-icon {
