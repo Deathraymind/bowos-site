@@ -18,6 +18,7 @@ body {
 
 .page {
     display: flex;
+    width: 100vw;
     flex-direction: column;
     align-items: center;
     margin-top: 0px;
@@ -25,6 +26,11 @@ body {
     align-items: left;
     text-align: left;
     height: 100vh;
+    background-image: url("assets/images/main-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .page-sliding {
@@ -78,10 +84,19 @@ body {
     font-style: normal;
 }
 
+
+.transparent-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
 .video {
     width: 80vw;
     height: auto;
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 .video-hyprland {
@@ -103,7 +118,7 @@ body {
 }
 
 .info {
-    font-size: 24px;
+    font-size: 35px;
     color: #8EA0DC;
     margin: 50px;
     margin-top: 0px;
