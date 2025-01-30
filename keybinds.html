@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyprland Keybinds</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ffcc;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .keybind-group {
+      margin-bottom: 30px;
+    }
+
+    .keybind-group h2 {
+      color: #00ffcc;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #00ffcc;
+      padding-bottom: 5px;
+    }
+
+    .keybind-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #2a2a2a;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .keybind-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+    }
+
+    .keybind-item .keys {
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    .keybind-item .description {
+      color: #e0e0e0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .keybind-item {
+        flex-direction: column;
+      }
+
+      .keybind-item .keys {
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hyprland Keybinds</h1>
+  <div class="container">
+    <!-- Window Management -->
+    <div class="keybind-group">
+      <h2>Window Management</h2>
+      <div class="keybind-item">
+        <span class="keys">SUPER + Q</span>
+        <span class="description">Kill active window</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + DELETE</span>
+        <span class="description">Exit Hyprland</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + W</span>
+        <span class="description">Toggle floating window</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + A</span>
+        <span class="description">Open Rofi (drun)</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + G</span>
+        <span class="description">Toggle group (dwindle)</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">ALT + RETURN</span>
+        <span class="description">Toggle fullscreen</span>
+      </div>
+    </div>
+
+    <!-- Screenshots -->
+    <div class="keybind-group">
+      <h2>Screenshots</h2>
+      <div class="keybind-item">
+        <span class="keys">SUPER + P</span>
+        <span class="description">Take a screenshot (Grim + Swappy)</span>
+      </div>
+    </div>
+
+    <!-- Application Shortcuts -->
+    <div class="keybind-group">
+      <h2>Application Shortcuts</h2>
+      <div class="keybind-item">
+        <span class="keys">SUPER + T</span>
+        <span class="description">Open Kitty terminal</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + E</span>
+        <span class="description">Open Nautilus (file manager)</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + C</span>
+        <span class="description">Open Visual Studio Code</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + F</span>
+        <span class="description">Open Zen Browser</span>
+      </div>
+    </div>
+
+    <!-- Workspace Management -->
+    <div class="keybind-group">
+      <h2>Workspace Management</h2>
+      <div class="keybind-item">
+        <span class="keys">SUPER + [1-0]</span>
+        <span class="description">Switch to workspace 1-10</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + SHIFT + [1-0]</span>
+        <span class="description">Move window to workspace 1-10</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + CTRL + [←→]</span>
+        <span class="description">Switch workspaces relative to active</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">SUPER + CTRL + ALT + [←→]</span>
+        <span class="description">Move window to relative workspace</span>
+      </div>
+    </div>
+
+    <!-- Audio Controls -->
+    <div class="keybind-group">
+      <h2>Audio Controls</h2>
+      <div class="keybind-item">
+        <span class="keys">XF86AudioPlay/Pause</span>
+        <span class="description">Play/Pause media</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">XF86AudioNext</span>
+        <span class="description">Next track</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">XF86AudioPrev</span>
+        <span class="description">Previous track</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">XF86AudioRaiseVolume</span>
+        <span class="description">Increase volume</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">XF86AudioLowerVolume</span>
+        <span class="description">Decrease volume</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">XF86AudioMute</span>
+        <span class="description">Toggle mute</span>
+      </div>
+    </div>
+
+    <!-- Brightness Controls -->
+    <div class="keybind-group">
+      <h2>Brightness Controls</h2>
+      <div class="keybind-item">
+        <span class="keys">XF86MonBrightnessUp</span>
+        <span class="description">Increase brightness</span>
+      </div>
+      <div class="keybind-item">
+        <span class="keys">XF86MonBrightnessDown</span>
+        <span class="description">Decrease brightness</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
